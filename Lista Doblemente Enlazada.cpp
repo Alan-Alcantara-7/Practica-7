@@ -9,6 +9,7 @@ struct Nodo{
 };
 void agregar( int);
 void mostrar();
+void mostrar2();
 struct Nodo *lista=NULL;
 
 int main(int argc, char** argv) {
@@ -32,6 +33,7 @@ int main(int argc, char** argv) {
             cout<<"Mostrar los datos de Nodos ";
             cout<<endl;
             mostrar();
+            mostrar2();
             break;
         case 3:
         	cout<<"Salir";
@@ -64,6 +66,18 @@ void mostrar(){
 	while(aux!=NULL){
 		cout<<aux->valor<<" ";
 		aux=aux->siguiente;
+	}
+	cout<<endl;
+}
+void mostrar2(){
+	Nodo *aux=lista;
+	while(aux->siguiente!=NULL){
+		aux=aux->siguiente;
+	}
+	
+	while(aux!=NULL){
+		cout<<aux->valor<<" ";
+		aux=aux->anterior;
 	}
 	cout<<endl;
 }
